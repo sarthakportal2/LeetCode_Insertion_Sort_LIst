@@ -1,6 +1,7 @@
 class Solution {
     public ListNode insertionSortList(ListNode head) {
-        //
+        //new Approach
+        //T(C(N)==O(N*N)) and S(C(N)==O(N)) as it requires non contigous memory space allocation iteratively
         ListNode tmp=new ListNode(0);//Temp node dynamic memory alloc
         ListNode curr=head;//curr node declare
         while(curr!=null){//Iterating curr node
@@ -9,8 +10,9 @@ class Solution {
                 prev=prev.next;}//Prev's current node declare 
                 curr.next=prev.next;prev.next=curr;//swapping curr nd prev's next node 
                 curr=nextNode;}//Current 's NextNode declare
-        return tmp.next;}} //Printing Inserted Sorted List 
-
+        return tmp.next;}} //Printing Inserted Sorted List
+    
+    //old Approach
     //testing
         // ListNode d=new ListNode(-1),curr=head;
         // while(curr!=null){
